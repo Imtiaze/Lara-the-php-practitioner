@@ -17,21 +17,32 @@ class Task {
 
     public function completed()
     {
-        return $this->completed;
+        $this->completed = true;
     }
 
     public function isCompleted()
     {
-        $this->completed = true;
+        return $this->completed;
+    }
+
+    public function description()
+    {
+        return $this->description;
     }
 }
 
-$task = new Task('Go to store');
-$task->isCompleted();
-dd($task->completed());
 
-var_dump($task);
-die;
+$tasks = [
+    new Task('Go to store'),
+    new Task('Do the homework'),
+    new Task('Finish the math assignment'),
+];
+
+
+$tasks[0]->completed();
+
+
+
 require 'index.view.php';
 
 
