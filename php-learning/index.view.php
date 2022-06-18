@@ -11,13 +11,12 @@
 
     <ul>
         <?php foreach($tasks as $task): ?>
-            <?php if ($task->isCompleted()) : ?>
-            <li><strike><?php echo $task->description() ?></strike></li>
+            <?php if ($task->status == true) : ?>
+            <li><strike><?php echo $task->description ?></strike></li>
             <?php else: ?>
-            <li><?php echo $task->description() ?></li>
+            <li><?php echo $task->description ?></li>
             <?php endif; ?>
         <?php endforeach ?>
     </ul>
-done
 </body>
 </html>
